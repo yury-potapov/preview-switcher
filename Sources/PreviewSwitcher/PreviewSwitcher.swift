@@ -20,32 +20,22 @@ public struct PreviewSwitcher<ViewType: View>: View {
 
     public var body: some View {
         views[currentViewNum]
-            .id(swiftUIid)
             .viewSwitcherContainer(
                 backgroundColor: backgroundColor,
-                onAnimation: onAnimation,
-                onTransition: onTransition
+                onAnimation: onAnimation
             )
     }
 
-    @State private var swiftUIid: UUID = UUID()
     @State private var currentViewNum: Int = 0
     private let views: [ViewType]
     private let backgroundColor: Color?
     private let onNextHandler: (() -> Void)?
 
     private func onAnimation() {
-        switchView(updateId: false)
+        switchView()
     }
 
-    private func onTransition() {
-        switchView(updateId: true)
-    }
-
-    private func switchView(updateId: Bool) {
-        if updateId {
-            swiftUIid = UUID()
-        }
+    private func switchView() {
         currentViewNum = (currentViewNum + 1) % views.count
         onNextHandler?()
     }

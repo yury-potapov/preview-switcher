@@ -10,20 +10,15 @@ struct ViewSwitcherContainerModifier: ViewModifier {
 
     init(
         backgroundColor: Color? = nil,
-        onAnimation: @escaping (() -> Void),
-        onTransition: @escaping (() -> Void)
+        onAnimation: @escaping (() -> Void)
     ) {
         self.backgroundColor = backgroundColor
         self.onAnimation = onAnimation
-        self.onTransition = onTransition
     }
 
     func body(content: Content) -> some View {
         VStack {
-            HStack {
-                animationButton
-                transitionButton
-            }
+            animationButton
 
             content
                 .border(Color.gray)
@@ -45,14 +40,7 @@ struct ViewSwitcherContainerModifier: ViewModifier {
 
     private var animationButton: some View {
         Button(action: onAnimation) {
-            Text("Animation")
-        }
-        .buttonStyle(PreviewButtonStyle())
-    }
-
-    private var transitionButton: some View {
-        Button(action: onTransition) {
-            Text("Transition")
+            Text("Switch")
         }
         .buttonStyle(PreviewButtonStyle())
     }
@@ -61,7 +49,6 @@ struct ViewSwitcherContainerModifier: ViewModifier {
 
     private let backgroundColor: Color?
     private let onAnimation: (() -> Void)
-    private let onTransition: (() -> Void)
 
     private static let tile = Tile()
 }
@@ -69,14 +56,12 @@ struct ViewSwitcherContainerModifier: ViewModifier {
 extension View {
     func viewSwitcherContainer(
         backgroundColor: Color? = nil,
-        onAnimation: @escaping (() -> Void),
-        onTransition: @escaping (() -> Void)
+        onAnimation: @escaping (() -> Void)
     ) -> some View {
         return modifier(
             ViewSwitcherContainerModifier(
                 backgroundColor: backgroundColor,
-                onAnimation: onAnimation,
-                onTransition: onTransition
+                onAnimation: onAnimation
             )
         )
     }
@@ -87,13 +72,13 @@ private struct Tile {
     init() {
         lightImage = Self.generateTileImage(
             light: .white,
-            dark: UIColor(red: 245, green: 245, blue: 245, alpha: 1),
+            dark: UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1),
             size: 28
         )
 
         darkImage = Self.generateTileImage(
             light: .black,
-            dark: UIColor(red: 25, green: 25, blue: 25, alpha: 1),
+            dark: UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0),
             size: 28
         )
     }
