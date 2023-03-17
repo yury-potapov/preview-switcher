@@ -3,6 +3,7 @@
 /Packages
 /*.xcodeproj
 xcuserdata/
+PreviewSwitcherExample.xcodeproj/project.xcworkspace/xcshareddata
 DerivedData/
 .swiftpm/config/registries.json
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
