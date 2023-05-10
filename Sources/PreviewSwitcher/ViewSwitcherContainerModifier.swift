@@ -10,15 +10,24 @@ struct ViewSwitcherContainerModifier: ViewModifier {
 
     init(
         backgroundColor: Color? = nil,
-        onAnimation: @escaping (() -> Void)
+        onAnimation: @escaping (() -> Void),
+        colorScheme: Binding<ColorScheme>,
+        layoutDirection: Binding<LayoutDirection>
     ) {
         self.backgroundColor = backgroundColor
         self.onAnimation = onAnimation
+        self._colorScheme = colorScheme
+        self._layoutDirection = layoutDirection
     }
 
     func body(content: Content) -> some View {
         VStack {
-            animationButton
+            HStack {
+                animationButton
+                ButtonSwitcher(value: $colorScheme)
+                ButtonSwitcher(value: $layoutDirection)
+            }
+            .environment(\.layoutDirection, .leftToRight)
 
             content
                 .border(Color.gray)
@@ -45,8 +54,8 @@ struct ViewSwitcherContainerModifier: ViewModifier {
         .buttonStyle(PreviewButtonStyle())
     }
 
-    @Environment(\.colorScheme) private var colorScheme
-
+    @Binding private var colorScheme: ColorScheme
+    @Binding private var layoutDirection: LayoutDirection
     private let backgroundColor: Color?
     private let onAnimation: (() -> Void)
 
@@ -56,14 +65,51 @@ struct ViewSwitcherContainerModifier: ViewModifier {
 extension View {
     func viewSwitcherContainer(
         backgroundColor: Color? = nil,
-        onAnimation: @escaping (() -> Void)
+        onAnimation: @escaping (() -> Void),
+        colorScheme: Binding<ColorScheme>,
+        layoutDirection: Binding<LayoutDirection>
     ) -> some View {
         return modifier(
             ViewSwitcherContainerModifier(
                 backgroundColor: backgroundColor,
-                onAnimation: onAnimation
+                onAnimation: onAnimation,
+                colorScheme: colorScheme,
+                layoutDirection: layoutDirection
             )
         )
+    }
+}
+
+private struct ButtonSwitcher<T: CaseIterable>: View
+    where T: Equatable, T.AllCases.Index == Int
+{
+    init(value: Binding<T>) {
+        _value = value
+    }
+
+    var body: some View {
+        Button(action: next) {
+            Text(String(describing: value))
+        }
+        .buttonStyle(PreviewButtonStyle())
+    }
+
+    private func next() {
+        value = T.next(after: value)
+    }
+
+    @Binding private var value: T
+}
+
+private extension CaseIterable where AllCases.Element: Equatable, AllCases.Index == Int {
+    static func next(after element: AllCases.Element) -> AllCases.Element {
+        assert(!allCases.isEmpty)
+        guard let index = allCases.firstIndex(of: element) else {
+            assertionFailure()
+            return element
+        }
+        let nextIndex = (index + 1) % allCases.count
+        return allCases[nextIndex]
     }
 }
 

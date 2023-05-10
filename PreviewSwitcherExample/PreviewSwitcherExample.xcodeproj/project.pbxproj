@@ -7,93 +7,102 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB85BF7229C500EB0031BBC9 /* PreviewSwitcherExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85BF7129C500EB0031BBC9 /* PreviewSwitcherExampleApp.swift */; };
-		FB85BF7429C500EB0031BBC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85BF7329C500EB0031BBC9 /* ContentView.swift */; };
-		FB85BF8129C501360031BBC9 /* PreviewSwitcher in Frameworks */ = {isa = PBXBuildFile; productRef = FB85BF8029C501360031BBC9 /* PreviewSwitcher */; };
+		FB2471642A0C055B008AA859 /* PreviewSwitcherExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2471632A0C055B008AA859 /* PreviewSwitcherExampleApp.swift */; };
+		FB2471662A0C055B008AA859 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2471652A0C055B008AA859 /* ContentView.swift */; };
+		FB2471682A0C055C008AA859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2471672A0C055C008AA859 /* Assets.xcassets */; };
+		FB24716B2A0C055C008AA859 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB24716A2A0C055C008AA859 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB85BF6E29C500EB0031BBC9 /* PreviewSwitcherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreviewSwitcherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB85BF7129C500EB0031BBC9 /* PreviewSwitcherExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSwitcherExampleApp.swift; sourceTree = "<group>"; };
-		FB85BF7329C500EB0031BBC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB2471602A0C055B008AA859 /* PreviewSwitcherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreviewSwitcherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2471632A0C055B008AA859 /* PreviewSwitcherExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSwitcherExampleApp.swift; sourceTree = "<group>"; };
+		FB2471652A0C055B008AA859 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB2471672A0C055C008AA859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB24716A2A0C055C008AA859 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FB85BF6B29C500EB0031BBC9 /* Frameworks */ = {
+		FB24715D2A0C055B008AA859 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB85BF8129C501360031BBC9 /* PreviewSwitcher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FB85BF6529C500EB0031BBC9 = {
+		FB2471572A0C055B008AA859 = {
 			isa = PBXGroup;
 			children = (
-				FB85BF7029C500EB0031BBC9 /* PreviewSwitcherExample */,
-				FB85BF6F29C500EB0031BBC9 /* Products */,
+				FB2471622A0C055B008AA859 /* PreviewSwitcherExample */,
+				FB2471612A0C055B008AA859 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FB85BF6F29C500EB0031BBC9 /* Products */ = {
+		FB2471612A0C055B008AA859 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB85BF6E29C500EB0031BBC9 /* PreviewSwitcherExample.app */,
+				FB2471602A0C055B008AA859 /* PreviewSwitcherExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FB85BF7029C500EB0031BBC9 /* PreviewSwitcherExample */ = {
+		FB2471622A0C055B008AA859 /* PreviewSwitcherExample */ = {
 			isa = PBXGroup;
 			children = (
-				FB85BF7129C500EB0031BBC9 /* PreviewSwitcherExampleApp.swift */,
-				FB85BF7329C500EB0031BBC9 /* ContentView.swift */,
+				FB2471632A0C055B008AA859 /* PreviewSwitcherExampleApp.swift */,
+				FB2471652A0C055B008AA859 /* ContentView.swift */,
+				FB2471672A0C055C008AA859 /* Assets.xcassets */,
+				FB2471692A0C055C008AA859 /* Preview Content */,
 			);
 			path = PreviewSwitcherExample;
+			sourceTree = "<group>";
+		};
+		FB2471692A0C055C008AA859 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FB24716A2A0C055C008AA859 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FB85BF6D29C500EB0031BBC9 /* PreviewSwitcherExample */ = {
+		FB24715F2A0C055B008AA859 /* PreviewSwitcherExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB85BF7C29C500EC0031BBC9 /* Build configuration list for PBXNativeTarget "PreviewSwitcherExample" */;
+			buildConfigurationList = FB24716E2A0C055C008AA859 /* Build configuration list for PBXNativeTarget "PreviewSwitcherExample" */;
 			buildPhases = (
-				FB85BF6A29C500EB0031BBC9 /* Sources */,
-				FB85BF6B29C500EB0031BBC9 /* Frameworks */,
-				FB85BF6C29C500EB0031BBC9 /* Resources */,
+				FB24715C2A0C055B008AA859 /* Sources */,
+				FB24715D2A0C055B008AA859 /* Frameworks */,
+				FB24715E2A0C055B008AA859 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PreviewSwitcherExample;
-			packageProductDependencies = (
-				FB85BF8029C501360031BBC9 /* PreviewSwitcher */,
-			);
 			productName = PreviewSwitcherExample;
-			productReference = FB85BF6E29C500EB0031BBC9 /* PreviewSwitcherExample.app */;
+			productReference = FB2471602A0C055B008AA859 /* PreviewSwitcherExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FB85BF6629C500EB0031BBC9 /* Project object */ = {
+		FB2471582A0C055B008AA859 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					FB85BF6D29C500EB0031BBC9 = {
-						CreatedOnToolsVersion = 14.1;
+					FB24715F2A0C055B008AA859 = {
+						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
-			buildConfigurationList = FB85BF6929C500EB0031BBC9 /* Build configuration list for PBXProject "PreviewSwitcherExample" */;
+			buildConfigurationList = FB24715B2A0C055B008AA859 /* Build configuration list for PBXProject "PreviewSwitcherExample" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -101,43 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = FB85BF6529C500EB0031BBC9;
-			packageReferences = (
-				FB85BF7F29C501360031BBC9 /* XCRemoteSwiftPackageReference "preview-switcher" */,
-			);
-			productRefGroup = FB85BF6F29C500EB0031BBC9 /* Products */;
+			mainGroup = FB2471572A0C055B008AA859;
+			productRefGroup = FB2471612A0C055B008AA859 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB85BF6D29C500EB0031BBC9 /* PreviewSwitcherExample */,
+				FB24715F2A0C055B008AA859 /* PreviewSwitcherExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FB85BF6C29C500EB0031BBC9 /* Resources */ = {
+		FB24715E2A0C055B008AA859 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB24716B2A0C055C008AA859 /* Preview Assets.xcassets in Resources */,
+				FB2471682A0C055C008AA859 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FB85BF6A29C500EB0031BBC9 /* Sources */ = {
+		FB24715C2A0C055B008AA859 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB85BF7429C500EB0031BBC9 /* ContentView.swift in Sources */,
-				FB85BF7229C500EB0031BBC9 /* PreviewSwitcherExampleApp.swift in Sources */,
+				FB2471662A0C055B008AA859 /* ContentView.swift in Sources */,
+				FB2471642A0C055B008AA859 /* PreviewSwitcherExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FB85BF7A29C500EC0031BBC9 /* Debug */ = {
+		FB24716C2A0C055C008AA859 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -187,7 +195,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -197,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		FB85BF7B29C500EC0031BBC9 /* Release */ = {
+		FB24716D2A0C055C008AA859 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -251,13 +259,14 @@
 			};
 			name = Release;
 		};
-		FB85BF7D29C500EC0031BBC9 /* Debug */ = {
+		FB24716F2A0C055C008AA859 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PreviewSwitcherExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 7T3VM8QML9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -271,7 +280,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.potap-yur.preview-switcher.PreviewSwitcherExample";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.potap-yur.example.PreviewSwitcherExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -279,13 +288,14 @@
 			};
 			name = Debug;
 		};
-		FB85BF7E29C500EC0031BBC9 /* Release */ = {
+		FB2471702A0C055C008AA859 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PreviewSwitcherExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 7T3VM8QML9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -299,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.potap-yur.preview-switcher.PreviewSwitcherExample";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.potap-yur.example.PreviewSwitcherExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -310,44 +320,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB85BF6929C500EB0031BBC9 /* Build configuration list for PBXProject "PreviewSwitcherExample" */ = {
+		FB24715B2A0C055B008AA859 /* Build configuration list for PBXProject "PreviewSwitcherExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FB85BF7A29C500EC0031BBC9 /* Debug */,
-				FB85BF7B29C500EC0031BBC9 /* Release */,
+				FB24716C2A0C055C008AA859 /* Debug */,
+				FB24716D2A0C055C008AA859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB85BF7C29C500EC0031BBC9 /* Build configuration list for PBXNativeTarget "PreviewSwitcherExample" */ = {
+		FB24716E2A0C055C008AA859 /* Build configuration list for PBXNativeTarget "PreviewSwitcherExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FB85BF7D29C500EC0031BBC9 /* Debug */,
-				FB85BF7E29C500EC0031BBC9 /* Release */,
+				FB24716F2A0C055C008AA859 /* Debug */,
+				FB2471702A0C055C008AA859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		FB85BF7F29C501360031BBC9 /* XCRemoteSwiftPackageReference "preview-switcher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/yury-potapov/preview-switcher";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		FB85BF8029C501360031BBC9 /* PreviewSwitcher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FB85BF7F29C501360031BBC9 /* XCRemoteSwiftPackageReference "preview-switcher" */;
-			productName = PreviewSwitcher;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = FB85BF6629C500EB0031BBC9 /* Project object */;
+	rootObject = FB2471582A0C055B008AA859 /* Project object */;
 }

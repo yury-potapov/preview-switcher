@@ -22,17 +22,28 @@ public struct PreviewSwitcher<ViewType: View>: View {
         views[currentViewNum]
             .viewSwitcherContainer(
                 backgroundColor: backgroundColor,
-                onAnimation: onAnimation
+                onAnimation: onAnimation,
+                colorScheme: $colorScheme,
+                layoutDirection: $layoutDirection
             )
+            .environment(\.colorScheme, colorScheme)
+            .environment(\.layoutDirection, layoutDirection)
     }
 
     @State private var currentViewNum: Int = 0
+    @State private var colorScheme: ColorScheme = .light
+    @State private var layoutDirection: LayoutDirection = .leftToRight
+
     private let views: [ViewType]
     private let backgroundColor: Color?
     private let onNextHandler: (() -> Void)?
 
     private func onAnimation() {
         switchView()
+    }
+
+    private func onColorScheme() {
+        colorScheme = colorScheme == .light ? .dark : .light
     }
 
     private func switchView() {
