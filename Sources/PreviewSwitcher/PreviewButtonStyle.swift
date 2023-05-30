@@ -13,6 +13,7 @@ struct PreviewButtonStyle: ButtonStyle {
             .padding()
             .background(Color.blue)
             .foregroundColor(.white)
+            .opacity(configuration.isPressed ? 0.7 : 1.0)
             .cornerRadius(8)
     }
 }
